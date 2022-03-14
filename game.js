@@ -2,7 +2,7 @@ require('./js/libs/weapp-adapter')
 
 window.p2 = require('./js/libs/p2')
 window.PIXI = require('./js/libs/pixi')
-window.Phaser = require('./js/libs/phaser-split.min')
+window.Phaser = require('./js/libs/phaser-split')
 
 
 // 定义全局常量
