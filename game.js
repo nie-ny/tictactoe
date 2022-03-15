@@ -15,7 +15,7 @@ window.go = {
   game: null,                      // 游戏实例
   userInfo: null,                  // 玩家信息
   opponentInfo: null,              // 对手信息
-  common: null,                    // 公共函数
+  common: require('js/util/common'),    // 公共函数
   server: null,                    // 与服务器的交互
   launchRoomId: null,              // 进入主菜单时需要加入的房间 id
   battle: null,                    // 对战状态
@@ -33,4 +33,6 @@ const game = new Phaser.Game(config)                   // 创建游戏
 go.game = game
 // 注册游戏场景
 game.state.add('start', require('./js/states/start'))  // 添加 start 游戏场景
+game.state.add('menu', require('./js/states/menu'))    // 主菜单 场景
+game.state.add('practice', require('./js/states/practice'))    // 单人 场景
 game.state.start('start')                              // 启动 start 游戏场景
